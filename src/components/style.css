@@ -1,0 +1,151 @@
+.input{
+    display: flex;
+    width: 90%;
+    position: relative;
+    align-items: center;
+}
+
+
+.input__box{
+    width: 100%;
+    border-radius: 50px;
+    padding: 20px 30px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px #151414;
+    font-family: "poppins";
+}
+
+.input__box:focus{
+    box-shadow: inset 0 0 10px #000;
+    color: #00c882;
+    outline: none;
+}
+
+
+
+.submit__button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    border-radius: 50%;
+    right: 0;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #03143adf;
+    color:#00c882;
+    transition: 0.2s all;
+    box-shadow: 0 0 10px #1e0404;
+}
+
+.submit__button:hover{
+    background-color:#041c50df;
+    cursor: pointer;
+}
+
+.submit__button:active{
+    transform: scale(0.8);
+    box-shadow: #000;
+}
+
+.todos{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 15px;
+}
+
+
+.active_wrapper, .completed_wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 47.5%;
+    background-color: #3f5c50;
+    padding: 20px;
+    justify-content: flex-start;
+    height: fit-content;
+}
+
+.heading__text{
+    color: #fff;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.todo__single{
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    color: #fff;
+    background-image: url('../images/bgImage.jpg');
+}
+
+.todo__single__text{
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+    outline: none;
+}
+
+.icon{
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.icon.edit{
+    color: #047779;
+}
+.icon.completed{
+    color: #20fc9d;
+}
+.icon.delete{
+    color: #992907;
+}
+
+.edit__input{
+    width: 80%;
+    background-color: #3f5c50;
+    flex: 1;
+    border-radius: 10px;
+    padding: 15px;
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.edit__input:focus{
+    outline: none;
+}
+
+.completed_wrapper{
+    background-color: #1e6326;
+}
+
+.todo__single:hover{
+    box-shadow: 5px 0 17px rgb(47, 29, 29);
+}
+
+@media screen and (max-width: 800px){
+    .input, .todos{
+        width: 95%;
+    }
+    .todo__single{
+        width: 100%;
+    }
+
+    .todos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .active_wrapper, .completed_wrapper{
+        width: 100%;
+    }
+}
